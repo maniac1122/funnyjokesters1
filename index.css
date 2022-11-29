@@ -31,7 +31,11 @@ body {
   background-color: #ddd;
   color: black;
 }
-
+<style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #04AA6D;
