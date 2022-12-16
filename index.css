@@ -381,6 +381,9 @@ p {
 .container form textarea:focus {
     outline:none;
     border-bottom:3px solid rgba(255, 255, 255,1);
+
+		.example{background-color:''
+			.backgroundcolor {background-color: rgb(255, 122, 89); }
 }
 placeholder {
     color: #fff;
@@ -470,6 +473,8 @@ placeholder {
 
     #box div {
         width: 100%;
+		
+			
     }
 }
 
