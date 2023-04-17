@@ -35,6 +35,11 @@
   font-weight:normal;
   font-style:normal;
 }
+
+	@font-face {
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+	}
+	
 body {
   font-family:"Final Fantasy Script Collection - Final Fantasy VII";
   font-size: 40px;
