@@ -1,1 +1,4 @@
+This is a Brave Creators publisher verification file.
 
+Domain: funnyjokesters.com
+Token: ae325e2ac475eb0685753f1fc47e2b2bafe9f4af4577fa9441ccfaa36ee7c60d
