@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Ethereum Wallet</title>
+</head>
+<body>
+    <button id="connectButton">Connect to Ethereum Wallet</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            // Detect MetaMask provider
+            const provider = await detectEthereumProvider();
+
+            if (provider) {
+                // MetaMask is installed
+                const web3 = new Web3(provider);
+
+                // Check if accounts are accessible
+                const accounts = await web3.eth.requestAccounts();
+
+                // Add event listener to connect button
+                document.getElementById("connectButton").addEventListener("click", async () => {
+                    try {
+                        // Request user to connect their wallet
+                        await ethereum.request({ method: 'eth_requestAccounts' });
+                        // Once connected, retrieve user's address
+                        const accounts = await web3.eth.getAccounts();
+                        const userAddress = accounts[0];
+                        alert(`Connected to Ethereum wallet.\nUser Address: ${userAddress}`);
+                    } catch (error) {
+                        console.error(error);
+                        alert('Failed to connect to Ethereum wallet.');
+                    }
+                });
+            } else {
+                // MetaMask is not installed
+                alert('Please install MetaMask to connect to your Ethereum wallet.');
+            }
+        });
+    </script>
+</body>
+</html>
