@@ -116,7 +116,34 @@ Films</a>
 <body>
 <a href="web3game.html" title="Web 3 Game"></a>Welcome to FunnyJokesters.com<br>
 <p>Welcome to FunnyJokesters.com</p>
-	
+	<
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hit Counter:</title>
+</head>
+<body>
+  <h1>Welcome to FunnyJokesters.com</h1>
+  <p>This is a simple hit counter:</p>
+  <p id="hit-counter">0</p>
+
+  <script>
+    // Increment the hit counter on page load
+    window.onload = function() {
+      if(localStorage.getItem('hitCount')) {
+        var count = parseInt(localStorage.getItem('hitCount'));
+        count++;
+        localStorage.setItem('hitCount', count);
+        document.getElementById('hit-counter').textContent = count;
+      } else {
+        localStorage.setItem('hitCount', 1);
+        document.getElementById('hit-counter').textContent = 1;
+      }
+    };
+  </script>
+</body>
+
 <p>
   <header class="container">
   </header>
