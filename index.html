@@ -125,23 +125,7 @@ Films</a>
 </head>
 <body>
   <h1>Welcome to FunnyJokesters.com</h1>
-  <p>This is a simple hit counter:</p>
-  <p id="hit-counter">0</p>
-
-  <script>
-    // Increment the hit counter on page load
-    window.onload = function() {
-      if(localStorage.getItem('hitCount')) {
-        var count = parseInt(localStorage.getItem('hitCount'));
-        count++;
-        localStorage.setItem('hitCount', count);
-        document.getElementById('hit-counter').textContent = count;
-      } else {
-        localStorage.setItem('hitCount', 1);
-        document.getElementById('hit-counter').textContent = 1;
-      }
-    };
-  </script>
+  
 </body>
 
 <p>
