@@ -114,19 +114,31 @@ Films</a>
 <script src="/index.css"></script>
 
 <body>
+<label for="date">Date:</label>
+<div id="todays-date"></div>
+<script>
+    // Get today's date
+    var today = new Date();
+
+    // Format the date (adjust as needed)
+    var formattedDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+    // Get the element by ID and set its innerHTML to the formatted date
+    document.getElementById('todays-date').innerHTML = formattedDate;
+</script>&nbsp; &nbsp;Hello this is my first blog post&nbsp; &nbsp;&nbsp;
+
 <a href="web3game.html" title="Web 3 Game"></a>
 <html lang="en">
 
 <body>
-<h1>Welcome to FunnyJokesters.com</h1>
-  
+<h1>&nbsp;</h1>
 </body>
 
 <p>
   <header class="container">
   </header>
   <footer>
-    <section class="box" id="myLinks">Hello and welcome to Funnyjokesters.com . This is my website, developed and created by Michael Christopher. Here you will find links to my Resume, Books I've written, Films I've produced, and games I've developed. In addition, you will find some featured content. </section>
+    <section class="box" id="myLinks"> </section>
   </footer>
 </p>
 <p>&nbsp;</p>

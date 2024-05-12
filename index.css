@@ -69,6 +69,17 @@ a {
     font-weight: 500;
     color: #482ff7;
 }
+<style>
+    /* Using ID */
+    #todays-date {
+        /* Your styles here */
+    }
+
+    /* Using class */
+    .todays-date {
+        /* Your styles here */
+    }
+</style>
 
 @media only screen and (max-width: 768px) {
     .nav-menu {
