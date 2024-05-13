@@ -113,6 +113,83 @@ Films</a>
     <link rel="stylesheet" href="/index.css">
     <title>Welcome to FunnyJokesters.com</title>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Wallet</title>
+    <!-- Include Web3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js" integrity="sha512-ZVRzXoKbq8eEn7U/8kJYR4ZTDgCf3ArhiA2gZGyDa/BvL+mldAU3jp3CzygzHUCGS9COQyVccCep36DId4wHbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Wallet</title>
+    <style>
+        #connectButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999; /* Ensure button stays on top of other content */
+        }
+    </style>
+    <!-- Include Solana JavaScript API -->
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js"></script>
+</head>
+<body>
+    <button id="connectButton">Connect Wallet</button>
+    <script>
+        // Function to connect wallet
+        async function connectWallet() {
+            // Create a new connection to the Solana cluster
+            const connection = new web3.Connection(web3.clusterApiUrl('devnet'));
+            
+            try {
+                // Request wallet connection
+                const wallet = await web3.connect();
+                console.log('Wallet connected:', wallet.publicKey.toBase58());
+                // Here, you can proceed to fetch the joke or NFT
+                // Example: Fetch joke or NFT and display it
+            } catch (error) {
+                console.error('Error connecting wallet:', error);
+            }
+        }
+
+        // Event listener for connect button
+        document.getElementById('connectButton').addEventListener('click', connectWallet);
+    </script>
+</body>
+</html>
+
+<body>
+    <button id="connectButton">Connect Wallet</button>
+    <script>
+        // Function to connect wallet
+        async function connectWallet() {
+            // Check if MetaMask is installed
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    // Request account access
+                    await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    console.log('Wallet connected:', window.ethereum.selectedAddress);
+                    // Here, you can proceed to fetch the joke or NFT
+                    // Example: Fetch joke or NFT and display it
+                } catch (error) {
+                    console.error('Error connecting wallet:', error);
+                }
+            } else {
+                console.error('MetaMask is not installed');
+            }
+        }
+
+        // Event listener for connect button
+        document.getElementById('connectButton').addEventListener('click', connectWallet);
+    </script>
+</body>
+</html>
 
 
 <script src="/index.css"></script>
