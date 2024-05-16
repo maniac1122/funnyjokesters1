@@ -3,7 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>films </title>
-	
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt. Gibbs goes to Washington</title>
+    <script src="/path-to-your-ruffle/ruffle.js"></script>
+</head>
+<body>
+    <script>
+        // Initialize Ruffle
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("flash-container");
+            container.appendChild(player);
+            player.load("/path-to-your-swf-file/your-file.swf");
+        });
+    </script>
+    <div id="flash-container" style="width: 800px; height: 600px;">
+        <!-- Ruffle will load the SWF here -->
+    </div>
+</body>
+</html>
+
 
 <link href="../../../Unnamed Site 2/index.css" rel="stylesheet" type="text/css">
 </head>
