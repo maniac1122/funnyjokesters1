@@ -212,6 +212,18 @@ function MM_preloadImages() { //v3.0
 <p>&nbsp; &nbsp; &nbsp; &nbsp;I will be implementing several changes to this website. Including a service where you pay a nominal fee and receive a NFT and a Joke. I will be rolling out these changes in the following months.    &nbsp;</p>
 <p>&nbsp;&nbsp;</p>
 <html lang="en">
+<head>
+    <title>Sign up for the FunnyJokesters mailing list!</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <form action="subscribe.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
 
 <body>
 <h1>&nbsp;</h1>
