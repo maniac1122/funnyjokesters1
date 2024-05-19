@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Films</title>
+    <!-- Include Ruffle Player library -->
+    <script src="https://cdn.jsdelivr.net/npm/@rufflejs/ruffle@latest/dist/ruffle.js"></script>
+    <style>
+        /* Styling for the embedded content */
+        #flash-content {
+            width: 100%;
+            max-width: 800px; /* Adjust maximum width as needed */
+            margin: 0 auto; /* Center the content */
+        }
+    </style>
+</head>
+<body>
+    <div id="flash-content">
+        <!-- Embedding .swf file using Ruffle -->
+        <script>
+            // Replace 'your-movie.swf' with your actual .swf file path
+            window.addEventListener('DOMContentLoaded', () => {
+                const container = document.getElementById('flash-content');
+                const rufflePlayer = new RufflePlayer();
+                rufflePlayer.load('/path/to/your-movie.swf');
+                container.appendChild(rufflePlayer);
+            });
+        </script>
+    </div>
+</body>
+</html>
