@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Films</title>
-    <!-- Include Ruffle Player library -->
-    <script src="https://cdn.jsdelivr.net/npm/@rufflejs/ruffle@latest/dist/ruffle.js"></script>
-    <style>
-        /* Styling for the embedded content */
-        #flash-content {
-            width: 100%;
-            max-width: 800px; /* Adjust maximum width as needed */
-            margin: 0 auto; /* Center the content */
-        }
-    </style>
+    <title>Funny Jokesters</title>
+    <script src="path/to/ruffle.js"></script>
 </head>
 <body>
-    <div id="flash-content">
-        <!-- Embedding .swf file using Ruffle -->
-        <script>
-            // Replace 'your-movie.swf' with your actual .swf file path
-            window.addEventListener('DOMContentLoaded', () => {
-                const container = document.getElementById('flash-content');
-                const rufflePlayer = new RufflePlayer();
-                rufflePlayer.load('/path/to/your-movie.swf');
-                container.appendChild(rufflePlayer);
-            });
-        </script>
+    <div id="flash-container">
+        <embed src="path/to/yourfile.swf" width="550" height="400">
     </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const flashContainer = document.getElementById("flash-container");
+            const player = ruffle.createPlayer();
+            flashContainer.appendChild(player);
+            player.load("MrGibbs goes to Washington_clean.swf");
+        });
+    </script>
 </body>
 </html>
+
