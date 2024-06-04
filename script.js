@@ -1,7 +1,7 @@
 const products = [
     { id: 1, name: 'FunnyJokesters Stuff You Havent Seen Before DVD', price: 19.99, image: 'shirt.jpg' },
-    { id: 2, name: 'FunnyJokesters.com Custom Tote Bag', price: 14.99, image: 'hat.jpg' },
-    { id: 3, name: 'FunnyJokesters.com Custom T-Shirt', price: 9.99, image: 'socks.jpg' }
+    { id: 2, name: 'FunnyJokesters Custom Tote Bag', price: 14.99, image: 'hat.jpg' },
+    { id: 3, name: 'FunnyJokesters Custom T-Shirt', price: 9.99, image: 'socks.jpg' }
 ];
 
 function displayProducts() {
