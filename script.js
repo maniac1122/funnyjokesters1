@@ -1,7 +1,7 @@
 const products = [
-    { id: 1, name: 'Funny T-Shirt', price: 19.99, image: 'shirt.jpg' },
-    { id: 2, name: 'Funny Hat', price: 14.99, image: 'hat.jpg' },
-    { id: 3, name: 'Funny Socks', price: 9.99, image: 'socks.jpg' }
+    { id: 1, name: 'FunnyJokesters Stuff You Havent Seen Before DVD', price: 19.99, image: 'shirt.jpg' },
+    { id: 2, name: 'FunnyJokesters.com Custom Tote Bag', price: 14.99, image: 'hat.jpg' },
+    { id: 3, name: 'FunnyJokesters.com Custom T-Shirt', price: 9.99, image: 'socks.jpg' }
 ];
 
 function displayProducts() {
