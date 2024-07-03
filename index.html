@@ -171,6 +171,21 @@ function changeLink() {
     window.location.href = newUrl;
 }
 </script>
+	
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Phantom Wallet</title>
+</head>
+<body>
+    <button id="connect-button">Connect to Phantom Wallet</button>
+
+    <!-- Include the Solana web3.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/solana-web3.js/1.30.0/solana-web3.min.js"></script>
+    <!-- Include the main.js file -->
+    <script src="main.js"></script>
+</body>
+
 <script>
         // Function to connect wallet
         async function connectWallet() {
