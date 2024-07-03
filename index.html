@@ -161,7 +161,7 @@ function MM_preloadImages() { //v3.0
 <body>
 <p>Best website&nbsp;</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Films    &nbsp; 
-<button type="button" onclick="changeLink()" class="btn btn-lg">EtsyShop&nbsp;</button>
+
 	<script>
 function changeLink() {
     // The new URL you want to link to
@@ -209,31 +209,6 @@ function changeLink() {
 </body>
 </html>
 
-<body>
-    <button id="connectButton">Connect Wallet</button>
-    <script>
-        // Function to connect wallet
-        async function connectWallet() {
-            // Check if MetaMask is installed
-            if (typeof window.ethereum !== 'undefined') {
-                try {
-                    // Request account access
-                    await window.ethereum.request({ method: 'eth_requestAccounts' });
-                    console.log('Wallet connected:', window.ethereum.selectedAddress);
-                    // Here, you can proceed to fetch the joke or NFT
-                    // Example: Fetch joke or NFT and display it
-                } catch (error) {
-                    console.error('Error connecting wallet:', error);
-                }
-            } else {
-                console.error('MetaMask is not installed');
-            }
-        }
-
-        // Event listener for connect button
-        document.getElementById('connectButton').addEventListener('click', connectWallet);
-    </script>
-</body>
 </html>
 
 
@@ -255,6 +230,7 @@ function changeLink() {
 <p>Welcome to FunnyJokesters.com&nbsp;</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp;Custom 3D Printed Objects! Hand made frommy home to yours! Click below to view my Etsy shop or my Google Maps location business!&nbsp; &nbsp; &nbsp;</p>
 <p>&nbsp;&nbsp;</p>
+	<button type="button" onclick="changeLink()" class="btn btn-lg">EtsyShop&nbsp;</button>
 <input type="button" name="button" id="button" value="Button">
 <html lang="en">
 <head>
