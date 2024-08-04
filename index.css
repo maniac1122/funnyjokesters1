@@ -1,161 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
-
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #0F0; /* Matrix green text */
+    background-color: #000; /* Black background */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    color: #0F0; /* Matrix green headings */
 }
 
-li {
-    list-style: none;
-}
-
+/* Links */
 a {
+    color: #0F0; /* Matrix green links */
     text-decoration: none;
 }
-/* Sidebar styling */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    padding-top: 20px;
+
+a:hover {
+    text-decoration: underline;
 }
 
-.sidebar-nav {
-    margin-left: 20px;
-}
-
-.sidebar-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-item {
-    margin-bottom: 10px;
-}
-
-.sidebar-item a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Content area styling */
-.content {
-    margin-left: 250px; /* Adjust this value to match the width of the sidebar */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.header{
-    border-bottom: 1px solid #E2E8F0;
+/* Header */
+header {
+    background: #111; /* Darker background for header */
+    padding: 10px 0;
+    text-align: center;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
+header h1 {
+    margin: 0;
 }
 
-.hamburger {
-    display: none;
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
+nav ul li {
+    display: inline;
+    margin-right: 15px;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav ul li a {
+    color: #0F0;
 }
 
-.nav-item {
-    margin-left: 5rem;
+/* Main Content */
+main {
+    padding: 20px;
 }
 
-.nav-link{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
-}
-
-.nav-link:hover{
-    color: #482ff7;
-}
-
-.nav-logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
-}
-<style>
-    /* Using ID */
-    #todays-date {
-        /* Your styles here */
-    }
-
-    /* Using class */
-    .todays-date {
-        /* Your styles here */
-    }
-</style>
-
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        transform: translateY(-8px) rotate(-45deg);
-    }
+/* Footer */
+footer {
+    background: #111;
+    color: #0F0;
+    text-align: center;
+    padding: 10px 0;
 }
