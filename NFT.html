@@ -2,6 +2,25 @@
 
 <head>
   <meta charset="UTF-8">
+	<button onclick="connectToPhantom()">Connect with Phantom</button> 
+
+<script>
+  async function connectToPhantom() {
+    if (window.solana) {
+      try {
+        const provider = window.solana;
+        const { publicKey } = await provider.connect();
+        console.log("Connected to Phantom wallet:", publicKey.toString());
+      } catch (error) {
+        console.error("Error connecting to Phantom:", error);
+      }
+    } else {
+      alert("Please install Phantom wallet extension");
+    }
+  }
+</script>
+
+	
   <title>E2E Test Dapp</title>
   <link rel="icon" type="image/png" href="metamask-fox.svg">
 
